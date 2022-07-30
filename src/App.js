@@ -20,7 +20,9 @@ function App() {
         /> :
         <Video /> 
       }
-      <Explanation/>
+      <Explanation
+        explanation = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit itaque quod accusantium saepe, corporis nesciunt dolore voluptates deleniti ex eligendi architecto, quia optio vitae nemo consequuntur. A numquam ipsam vitae.'
+      />
     </div>
   );
 }

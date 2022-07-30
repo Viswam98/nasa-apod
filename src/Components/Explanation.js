@@ -1,9 +1,11 @@
-const Explanation = () => {
+import './Explanation.css'
+
+const Explanation = ({ explanation }) => {
     return ( 
-        <div>
-            <p>Explanation...</p>
-        </div>
-     );
+        
+        <div id="para">{explanation}</div>
+        
+    );
 }
  
 export default Explanation;
