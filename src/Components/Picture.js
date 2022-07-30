@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import './Picture.css'
-const Picture = ({ src }) => {
+const Picture = ({ APOD }) => {
     const [loading, setloading] = useState(true)
-    useEffect( ()=>setloading(true), [src] )
+    const {url, hdurl} = APOD
+    useEffect( ()=>{
+        return ()=>setloading(true)
+    }, [APOD])
     return ( 
         <div>
             <div id="image-container">
@@ -11,14 +14,14 @@ const Picture = ({ src }) => {
                             <div id="loader" className={loading ? 'loader' : ''}></div>
                     </div>
                     <a 
-                        href={src}
+                        href={hdurl}
                         target='_blank' 
                         className="image-link"
                     >
                         <img 
-                            src={src} 
+                            src={url} 
                             className="img"
-                            onLoad={()=>setTimeout(()=>setloading(false),0)} 
+                            onLoad={()=>setloading(false)} 
                         />
                     </a>
                 </div>

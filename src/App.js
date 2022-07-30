@@ -31,7 +31,7 @@ function App() {
         handleDate={handleDate}
       />
       { 
-        pictureOfTheDay && <Picture src = {pictureOfTheDay.url}/>
+        pictureOfTheDay && <Picture APOD = {pictureOfTheDay}/>
       }
       {
         pictureOfTheDay && <Explanation explanation={pictureOfTheDay.explanation}/>
