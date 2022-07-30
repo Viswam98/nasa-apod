@@ -14,8 +14,6 @@ function App() {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_APOD_KEY}&date=${selectedDate}`)
         .then( response => response.json())
         .then( data => {
-            // if(data.media_type == "image") return handleImage(data)
-            // handleVideo(data)
             setPictureOfTheDay(data)
         })
   }, [selectedDate])
@@ -30,8 +28,10 @@ function App() {
       <DateInputForm
         handleDate={handleDate}
       />
+
       { 
-        pictureOfTheDay && <Picture APOD = {pictureOfTheDay}/>
+        pictureOfTheDay && (pictureOfTheDay.media_type === "image" ? 
+          <Picture APOD = {pictureOfTheDay}/> : <Video APOD = {pictureOfTheDay}/>)
       }
       {
         pictureOfTheDay && <Explanation explanation={pictureOfTheDay.explanation}/>

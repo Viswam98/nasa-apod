@@ -1,7 +1,14 @@
-const Video = () => {
+import './Video.css'
+
+const Video = ({APOD}) => {
+    const {url} = APOD
     return ( 
         <div>
-            <h1>Video</h1>
+            <iframe 
+                src={url}
+                className='video'
+                allowFullScreen
+            ></iframe>
         </div>
      );
 }

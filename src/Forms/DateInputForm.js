@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './DateInputForm.css'
 const DateInputForm = ({handleDate}) => {
     let today = new Date().toJSON().slice(0,10)
     const [date, setDate] = useState(today)
