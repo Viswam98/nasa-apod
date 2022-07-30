@@ -5,9 +5,37 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
+}
 
+h1 {
+  font-size: 1.5em;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode #para {
+  background-color: rgb(34, 29, 29);
 }
 
 
 
+.input-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  
+}
+
+
+/* google fonts icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
