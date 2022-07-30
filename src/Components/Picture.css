@@ -1,0 +1,52 @@
+#image{
+    position: relative;
+    height: 350px;
+    width: 550px;
+    margin: auto;
+}
+
+.img {
+    height: 350px;
+    width: 550px;
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.55);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.55);
+    
+    
+    border: 1px solid azure;
+    border-radius: 20px; 
+    
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgb(215, 227, 239);
+    
+    height: 350px;
+    width: 550px;
+    margin: auto;
+
+    border-radius: 20px; 
+
+    opacity: 0.6;
+}
+
+
+.loader {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    border: 10px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 10px solid #18b1d8;
+    width: 100px;
+    height: 100px;
+    animation: spinner 1s linear infinite;
+}
+
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

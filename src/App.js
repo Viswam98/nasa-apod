@@ -15,7 +15,9 @@ function App() {
       <DateInputForm/>
       {  
         isPicture ? 
-        <Picture /> :
+        <Picture 
+          src = 'https://apod.nasa.gov/apod/image/2205/CatsPaw_Bemmerl_960.jpg'
+        /> :
         <Video /> 
       }
       <Explanation/>
